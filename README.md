@@ -8,7 +8,7 @@ Proyecto de MEAN curso Knowtech
 4. `mongo`
 5. `use storedb`
 6. En el directorio del proyecto ir a __app/config/init.json__ y copiar el `.json`
-7. `db.product.insert(`__pegar el texto copiado__`)`
+7. `db.product.insert(`_pegar el texto copiado_`)`
 8. `db.product.show().pretty()` para verificar que los productos se insertaron correctamente.
 
 ### Aplicacion
