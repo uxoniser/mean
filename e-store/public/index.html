@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app="e-store">
+
+<head>
+  <meta charset="utf-8" />
+  <title>AngularJS Plunker</title>
+  <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+  <link rel="stylesheet" href="content/css/style.css" />
+
+</head>
+
+<body class="fixed-navbar-body">
+  <header  ng-controller="MainController as vm">
+    <nav ng-hide="vm.isNotFound()" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#/">e-store</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li ng-class="{active: vm.isActiveUrl('/')}"><a href="#/">Home</a></li>
+          <li ng-class="{active: vm.isActiveUrl('/products')}"><a href="#/products">Products</a></li>
+          <li ng-class="{active: vm.isActiveUrl('/mycart')}"><a href="#/mycart">My Cart</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <ng-view></ng-view>
+  </div>
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.9/angular.js" data-semver="1.4.9"></script>
+  <script data-require="angular-route@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular-route.js"></script>
+  
+  <script src="app.js"></script>
+  
+  <script src="modules/products.js"></script>
+  <script src="modules/cart.js"></script>
+  
+  <script src="configs/app.js"></script>
+  <script src="configs/products.js"></script>
+  <script src="configs/cart.js"></script>
+  
+  <script src="services/products.js"></script>
+  <script src="services/cart.js"></script>
+  
+  <script src="directives/add-review.js"></script>
+  
+  <script src="controllers/main.js"></script>
+  <script src="controllers/products.js"></script>
+  <script src="controllers/product.js"></script>
+  <script src="controllers/cart.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

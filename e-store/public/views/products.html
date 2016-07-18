@@ -1,0 +1,18 @@
+<div ng-init="vm.loadProducts()">
+  <ul ng-show="vm.productos && vm.productos.length" ng-repeat="producto in vm.productos">
+    <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12 list-unstyled">
+      <div class="row">
+        <div class="thumbnail">
+          <img ng-src="{{producto.imagen}}" alt="" class="img-rounded" />
+          <div class="caption">
+            <h3>{{producto.nombre}}</h3>
+            <p>{{producto.precio | currency : "€" : (2)}}</p>
+            <p>Cantidad disponible: {{producto.cantidadDisponible}}</p>
+            <button class=" btn btn-primary" ng-click="vm.verDetalle(producto._id)">Ver detalle</button>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <p ng-hide="vm.productos && vm.productos.length" class="text-center">No products</p>
+</div>

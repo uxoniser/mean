@@ -1,0 +1,25 @@
+<form name="addReviewForm" ng-submit="addReviewForm.$valid && vm.addNewReview(addReviewForm)" novalidate>
+      <div class="form-group" ng-class="{ 'has-error' : vm.isErrorRequired(addReviewForm.reviewTitle)}">
+        <label for="reviewTitle">Titulo:</label>
+        <input type="text" 
+        name="reviewTitle" 
+        id="reviewTitle"
+        class="form-control" 
+        placeholder="Inserte el titulo" 
+        ng-model="vm.newReview.titulo" required/>
+        <p ng-show="vm.isErrorRequired(addReviewForm.reviewTitle)" 
+        class="help-block">El titulo no puede ser vacio</p>
+      </div>
+      <div class="form-group" ng-class="{ 'has-error' : vm.isErrorRequired(addReviewForm.reviewDesc)}">
+        <label for="reviewDesc">Comentario:</label>
+        <textarea rows="5" name="reviewDesc" id="reviewDesc" class="form-control" placeholder="Inserte el comentario" ng-model="vm.newReview.descripcion" required></textarea>
+        <p ng-show="vm.isErrorRequired(addReviewForm.reviewDesc)" class="help-block">El comentario no puede ser vacio</p>
+      </div>
+      <div class="form-group" ng-class="{ 'has-error' : vm.isErrorRequired(addReviewForm.reviewEmail) || vm.isErrorEmail(addReviewForm.reviewEmail)}">
+        <label for="reviewEmail">Email:</label>
+        <input type="email" name="reviewEmail" id="reviewEmail" class="form-control" placeholder="Inserte el email" ng-model="vm.newReview.email" required/>
+        <p ng-show="vm.isErrorRequired(addReviewForm.reviewEmail)" class="help-block">El email no puede ser vacio</p>
+        <p ng-show="vm.isErrorEmail(addReviewForm.reviewEmail)" class="help-block">El email es invalido</p>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Enviar">
+    </form>

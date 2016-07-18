@@ -1,0 +1,26 @@
+<div ng-init="vm.getProductById()">
+  <img ng-src="{{vm.producto.imagen}}" />
+  <h1>{{vm.producto.nombre}}</h1>
+  <h2>{{vm.producto.precio | currency : "€" : 2}}</h2>
+  <h2>Cantidad disponible: {{vm.producto.cantidadDisponible}}</h2>
+  <button class="btn btn-lg btn-success" ng-click="vm.addProduct()">Enviar al carrito</button>
+  <hr/>
+  <section class="panel panel-default text-left col-xs-12">
+    <h2>Informacion del producto</h2>
+    <p>{{vm.producto.descripcion}}</p>
+  </section>
+  <section class="panel panel-default text-left col-xs-12">
+    <h2>Reviews del producto</h2>
+    <add-review producto="vm.producto" servicecall="vm.addReViewServiceCall"></add-review>
+    <hr/>
+    <ul ng-show="vm.producto.reviews.length" class="list-unstyled" ng-repeat="review in vm.producto.reviews">
+      <li>
+        <h3>{{review.titulo}}</h3>
+        <p>{{review.descripcion}}</p>
+        <blockquote>
+          <footer>{{review.email}}</footer>
+        </blockquote>
+      </li>
+    </ul>
+  </section>
+</div>
