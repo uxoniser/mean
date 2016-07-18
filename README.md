@@ -7,7 +7,7 @@ Proyecto de MEAN curso Knowtech
 3. Abrir otra __cmd__ o __terminal__
 4. `mongo`
 5. `use storedb`
-6. En el directorio del proyecto ir a __app/config/init.json__ y copiar el `.json`
+6. En el directorio del proyecto ir a __app/config/init.json__ y copiar el texto
 7. `db.product.insert(`_pegar el texto copiado_`)`
 8. `db.product.show().pretty()` para verificar que los productos se insertaron correctamente.
 
@@ -16,3 +16,5 @@ Proyecto de MEAN curso Knowtech
 2. `npm install`
 3. `node server`
 4. Abrir el navegador e ir a `localhost:8080`
+
+> Pueden hacer fork de la app, hacer mejoras y subirlas a sus repos, o hacer pull request de esta y hacer las modificaciones directamente sobre este repo
